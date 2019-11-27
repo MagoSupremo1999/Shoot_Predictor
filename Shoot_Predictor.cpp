@@ -134,7 +134,7 @@ int main(){
 
             if (sf::Mouse::isButtonPressed(sf::Mouse::Right)) {                
                 activate_trajectory = true;
-                if (250.0 < (alpha * 43 + beta) < 350.0) {                      
+                if (225.0 < (alpha * 43 + beta) && (alpha * 43 + beta) < 375.0) {                      
                     goalkeeper.setPosition(25 , alpha * 43 + beta - 9);         //Goleiro defende a bola
                     goalkeeper.setFillColor(sf::Color::Red);                    //Goleiro fica alerta
                 }            
