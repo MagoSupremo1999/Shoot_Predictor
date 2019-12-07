@@ -134,10 +134,11 @@ int main(){
 
             if (sf::Mouse::isButtonPressed(sf::Mouse::Right)) {                
                 activate_trajectory = true;
-                if (225.0 < (alpha * 43 + beta) && (alpha * 43 + beta) < 375.0) {                      
-                    goalkeeper.setPosition(25 , alpha * 43 + beta - 9);         //Goleiro defende a bola
-                    goalkeeper.setFillColor(sf::Color::Red);                    //Goleiro fica alerta
-                }            
+                if (225.0 < (alpha * 10 + beta) && (alpha * 10 + beta) < 375.0) {                                                       //Analisa se a bola oferece risco de gol
+                    goalkeeper.setFillColor(sf::Color::Red);                                                                            //Goleiro fica alerta
+                    if (225.0 < (alpha * 43 + beta) && (alpha * 43 + beta) < 375.0) goalkeeper.setPosition(25 , alpha * 43 + beta - 9); //Goleiro defende a bola
+                    else goalkeeper.setPosition(10 , alpha * 10 + beta - 9);                                                            //Goleiro defende a bola
+                }
             }
         }
 
